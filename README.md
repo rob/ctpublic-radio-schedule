@@ -1,3 +1,3 @@
 # ctpublic-radio-schedule
 
-Daily on-air schedule for [Connecticut Public Radio](https://www.wnpr.org/) built with React using the NPR API.
+A sample React app to display the daily radio schedule for [Connecticut Public Radio](https://www.wnpr.org/) using the NPR API.
