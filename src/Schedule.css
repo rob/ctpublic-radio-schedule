@@ -1,19 +1,25 @@
-.ant-picker {
+.Schedule {
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 1024px;
+}
+
+.Schedule .ant-picker {
 	width: 200px;
 	margin-bottom: 10px;
 }
 
-.ant-list-item-meta-content {
+.Schedule .ant-list-item-meta-content {
 	padding-right: 40px;
 }
 
-.ant-typography.ant-typography-ellipsis {
-	color: inherit;
-	font-size: 12px;
-}
-
-.ant-typography mark {
+.Schedule .ant-typography mark {
 	font-size: 12px;
 	padding: 5px 10px;
 	border-radius: 10px;
+}
+
+.Schedule .ant-typography.ant-typography-ellipsis {
+	color: inherit;
+	font-size: 12px;
 }

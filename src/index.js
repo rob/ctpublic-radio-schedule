@@ -5,10 +5,8 @@ import './index.css'
 import Schedule from './Schedule'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div className="App">
-      <Schedule />
-    </div>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <React.StrictMode>
+        <Schedule />
+    </React.StrictMode>,
+    document.getElementById('root')
+)

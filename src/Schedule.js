@@ -31,52 +31,54 @@ const Schedule = () => {
 
     return (
         <>
-            <DatePicker
-                defaultValue={date}
-                format={dateFormatLong}
-                allowClear={false}
-                onChange={(date, dateString) => { setDate(date) }}
-            />
+            <div className="Schedule">
+                <DatePicker
+                    defaultValue={date}
+                    format={dateFormatLong}
+                    allowClear={false}
+                    onChange={(date, dateString) => { setDate(date) }}
+                />
 
-            <List
-                bordered
-                size="small"
-                itemLayout="horizontal"
-                loading={!isLoaded}
-                dataSource={shows}
-                renderItem={(show) => (
-                    <List.Item
-                        extra={
-                            <Text mark strong>
-                                {moment(show.start_time, 'hh').format('LT')}
-                            </Text>
-                        }
-                    >
-                        <List.Item.Meta
-                            title={
-                                <a
-                                    href={show.program.program_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {show.program.name}
-                                </a>
+                <List
+                    bordered
+                    size="small"
+                    itemLayout="horizontal"
+                    loading={!isLoaded}
+                    dataSource={shows}
+                    renderItem={(show) => (
+                        <List.Item
+                            extra={
+                                <Text mark strong>
+                                    {moment(show.start_time, 'hh').format('LT')}
+                                </Text>
                             }
-                            description={
-                                <Paragraph
-                                    ellipsis={{
-                                        rows: 1,
-                                        expandable: true,
-                                        symbol: 'more'
-                                    }}
-                                >
-                                    {show.program.program_desc}
-                                </Paragraph>
-                            }
-                        />
-                    </List.Item>
-                )}
-            />
+                        >
+                            <List.Item.Meta
+                                title={
+                                    <a
+                                        href={show.program.program_link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {show.program.name}
+                                    </a>
+                                }
+                                description={
+                                    <Paragraph
+                                        ellipsis={{
+                                            rows: 1,
+                                            expandable: true,
+                                            symbol: 'more'
+                                        }}
+                                    >
+                                        {show.program.program_desc}
+                                    </Paragraph>
+                                }
+                            />
+                        </List.Item>
+                    )}
+                />
+            </div>
         </>
     )
 }
